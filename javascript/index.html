@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Colorindo os ímpares</title>
+    <style type="text/css">
+        .child{
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="mother">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script>
+    //Aplicar qualquer cor apenas nos elementos ímpares
+    $(function(){
+        var index = 0;
+        $('.mother.child').each(function(){
+            if(index%2 == 1){
+                $(this).css('background','blue');
+            }
+            index++;
+        })
+    })
+</script>
+</body>
+</html>
